@@ -1,7 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_background_landscape">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="22dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/photo_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:src="@color/white"
+            app:layout_constraintEnd_toEndOf="@+id/photo_change_button"
+            app:layout_constraintStart_toStartOf="@+id/photo_change_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedCorners" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/photo_change_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_icon_photo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/photo_view" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/crime_solved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="90dp"
+            android:buttonTint="@color/white"
+            android:fontFamily="@font/roboto_medium"
+            android:layoutDirection="rtl"
+            android:text="@string/solved"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorLink="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/photo_change_button" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_crime_title"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="22dp"
+            android:layout_weight="1"
+            android:alpha="1.0"
+            android:hint="@string/title"
+            android:textColorHint="@color/dark_grey"
+            app:boxBackgroundColor="@color/white"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="10dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="10dp"
+            app:boxStrokeColor="@color/dark_grey"
+            app:boxStrokeWidth="0.5dp"
+            app:counterOverflowTextColor="@color/dark_grey"
+            app:counterTextColor="@color/dark_grey"
+            app:endIconMode="clear_text"
+            app:endIconTint="@color/dark_grey"
+            app:hintAnimationEnabled="true"
+            app:hintTextColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/photo_view"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/crime_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_medium"
+                android:inputType="textPersonName"
+                android:textColor="@color/dark_grey"
+                android:textColorHint="@color/dark_grey"
+                android:textCursorDrawable="@color/dark_grey"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/crime_date"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:width="300dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/wed_nov_14_11_56_est_2018"
+            android:textColor="@color/orange_main"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/photo_view"
+            app:layout_constraintTop_toBottomOf="@+id/text_input_crime_title" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/choose_suspect"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:width="300dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/choose_suspect"
+            android:textColor="@color/orange_main"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/photo_view"
+            app:layout_constraintTop_toBottomOf="@+id/crime_date"
+            app:strokeColor="@color/orange_main" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/orange_main"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/send_report"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/photo_view"
+            app:layout_constraintTop_toBottomOf="@+id/choose_suspect"
+            android:layout_marginTop="60dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
