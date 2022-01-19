@@ -10,4 +10,6 @@
     <string name="choose_suspect">Choose Suspect</string>
     <string name="send_report">Send Report</string>
     <string name="solved">Solved</string>
+    <string name="crime_title">Crime Title</string>
+    <string name="crime_date">Crime Date</string>
 </resources>
