@@ -9,8 +9,12 @@
         <entry key="..\:/Users/Lenovo/Documents/Android/Crimeful/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26871794871794874" />
         <entry key="..\:/Users/Lenovo/Documents/Android/Crimeful/app/src/main/res/drawable/ic_send_report.xml" value="0.18632478632478633" />
         <entry key="..\:/Users/Lenovo/Documents/Android/Crimeful/app/src/main/res/drawable/image_rounded.xml" value="0.2210970464135021" />
+        <entry key="..\:/Users/Lenovo/Documents/Android/Crimeful/app/src/main/res/layout-land/activity_crime.xml" value="0.16923076923076924" />
+        <entry key="..\:/Users/Lenovo/Documents/Android/Crimeful/app/src/main/res/layout-land/fragment_crime.xml" value="1.2375" />
+        <entry key="..\:/Users/Lenovo/Documents/Android/Crimeful/app/src/main/res/layout-land/fragment_crime_list.xml" value="0.16923076923076924" />
+        <entry key="..\:/Users/Lenovo/Documents/Android/Crimeful/app/src/main/res/layout/activity_crime.xml" value="0.17307692307692307" />
         <entry key="..\:/Users/Lenovo/Documents/Android/Crimeful/app/src/main/res/layout/activity_main.xml" value="0.25677083333333334" />
-        <entry key="..\:/Users/Lenovo/Documents/Android/Crimeful/app/src/main/res/layout/fragment_crime.xml" value="0.264" />
+        <entry key="..\:/Users/Lenovo/Documents/Android/Crimeful/app/src/main/res/layout/fragment_crime.xml" value="0.2" />
         <entry key="..\:/Users/Lenovo/Documents/Android/Crimeful/app/src/main/res/layout/fragment_crime_list.xml" value="0.17307692307692307" />
       </map>
     </option>
