@@ -2,7 +2,6 @@ package com.bignerdranchguide.crimeful.controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.bignerdranchguide.crimeful.detalisation.CrimeFragment
 import com.bignerdranchguide.crimeful.R
 
 class CrimeActivity : AppCompatActivity() {
@@ -13,7 +12,7 @@ class CrimeActivity : AppCompatActivity() {
         val currentFragment =
             supportFragmentManager.findFragmentById(R.id.fragment_container)
         if (currentFragment == null) {
-            val fragment = CrimeFragment()
+            val fragment = CrimeListFragment.newInstance()
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, fragment)
