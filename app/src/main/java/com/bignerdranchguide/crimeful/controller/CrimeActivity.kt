@@ -19,4 +19,5 @@ class CrimeActivity : AppCompatActivity() {
                 .commit()
         }
     }
+
 }

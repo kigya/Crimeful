@@ -1,4 +1,4 @@
-package com.bignerdranchguide.crimeful.detalisation
+package com.bignerdranchguide.crimeful.detailView
 
 import android.os.Bundle
 import android.text.Editable

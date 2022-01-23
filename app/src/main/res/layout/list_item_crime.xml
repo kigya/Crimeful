@@ -3,19 +3,25 @@
     android:layout_height="wrap_content"
     android:background="@drawable/list_layout_background"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:padding="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/crime_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_bold"
-        android:text="@string/crime_title" />
+        android:text="@string/crime_title"
+        android:textColor="@color/dark_grey"/>
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/crime_date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_medium"
-        android:text="@string/crime_date" />
+        android:text="@string/crime_date"
+        android:textColor="@color/white"/>
 </LinearLayout>
