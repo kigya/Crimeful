@@ -32,16 +32,25 @@
 
     </LinearLayout>
 
+
     <Space
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
 
     <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/requires_police_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_police"
+        android:layout_gravity="center" />
+
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/crime_solved"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_handcuffs"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"/>
 
 </LinearLayout>
