@@ -17,25 +17,15 @@ import com.bignerdranchguide.crimeful.extensions.log
 import com.bignerdranchguide.crimeful.model.Crime
 import com.bignerdranchguide.crimeful.model.CrimeListViewModel
 import android.text.format.DateFormat
+import androidx.lifecycle.Observer
 
 class CrimeListFragment : Fragment() {
 
     private lateinit var crimeRecyclerView: RecyclerView
-    private var adapter: CrimeAdapter? = null
+    private var adapter: CrimeAdapter? = CrimeAdapter(emptyList())
 
     private val crimeListViewModel: CrimeListViewModel by lazy {
         ViewModelProvider(this).get(CrimeListViewModel::class.java)
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        log(this, "Total crimes: ${crimeListViewModel.crimes.size}")
-    }
-
-    companion object {
-        fun newInstance(): CrimeListFragment {
-            return CrimeListFragment()
-        }
     }
 
     override fun onCreateView(
@@ -47,12 +37,23 @@ class CrimeListFragment : Fragment() {
         crimeRecyclerView =
             view.findViewById(R.id.crime_recycler_view) as RecyclerView
         crimeRecyclerView.layoutManager = LinearLayoutManager(context)
-        updateUI()
+        crimeRecyclerView.adapter = adapter
         return view
     }
 
-    private fun updateUI() {
-        val crimes = crimeListViewModel.crimes
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        crimeListViewModel.crimeListLiveData.observe(
+            viewLifecycleOwner,
+            Observer { crimes ->
+                crimes?.let {
+                    log(this, "Got crimes ${crimes.size}")
+                    updateUI(crimes)
+                }
+            })
+    }
+
+     private fun updateUI(crimes: List<Crime>) {
         adapter = CrimeAdapter(crimes)
         crimeRecyclerView.adapter = adapter
     }
@@ -109,4 +110,11 @@ class CrimeListFragment : Fragment() {
             holder.bind(crime)
         }
     }
+
+    companion object {
+        fun newInstance(): CrimeListFragment {
+            return CrimeListFragment()
+        }
+    }
+
 }
